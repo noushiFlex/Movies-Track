@@ -30,6 +30,8 @@ function SearchSection() {
                         description={movie.overview}
                         popularity={movie.vote_count}
                         genres={movie.genre_ids.join(", ")}
+                        bgPathLink={movie.backdrop_path}
+                        poster={movie.poster_path}
                     />
                 ))}
             </div>
