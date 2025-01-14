@@ -1,6 +1,7 @@
 import Header from "./components/header"
 import Body from "./components/body"
 import SearchSection from "./components/searchSection"
+import Footer from "./components/footer"
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Body />
       <SearchSection />
+      <Footer />
     </div>
   )
 }
