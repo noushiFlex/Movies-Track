@@ -22,7 +22,7 @@ function SearchSection() {
                 </span>
             )}
             <div className="p-10 grid grid-cols-2 gap-5">
-                {movies.slice(0, 10).map((movie) => (
+                {movies.slice(0, 20).map((movie) => (
                     <Card
                         key={movie.id}
                         title={movie.name || movie.title}
