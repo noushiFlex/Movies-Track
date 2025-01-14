@@ -8,14 +8,8 @@ import SparklesText from '@/components/ui/sparkles-text'
 function Header() {
     return (
         <div className='text-3xl h-dvh w-full pt-5 flex flex-col'>
-            <nav className='flex z-10  mx-auto justify-around w-5/12 h-14 bg-black rounded-sm text-white items-center sticky top-4 transition-all hover:scale-90'  onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('yohannName').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            }} >
-                <a href='#yohannName' className=' font-bold abs ' >Contact</a>
+            <nav className='flex z-10  mx-auto justify-around w-5/12 h-14 bg-black rounded-sm text-white items-center sticky top-4 transition-all hover:scale-90'  >
+                <a  className=' font-bold abs w-full h-full flex justify-center items-center ' href='https://linktr.ee/YohannVessime' target='_blank' >Contact</a>
             </nav>
             <div className='h-full flex justify-center items-center flex-col p-10'>
                 <div className='text-5xl font-extrabold mb-10 '><SparklesText text="Movies Track" sparklesCount='15' /></div>
