@@ -12,7 +12,7 @@ function SearchSection() {
     return (
         <div>
             <hr />
-            <div className="flex w-full max-w-sm items-center space-x-2 p-10">
+            <div id="search-section" className="flex w-full max-w-sm items-center space-x-2 p-10">
                 <Input type="email" placeholder="Recherchez un film..." />
                 <Button type="submit">Chercher</Button>
             </div>
