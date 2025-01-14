@@ -30,13 +30,13 @@ function Body() {
                             <p>
                                 -&gt; Plus de <span className="font-semibold text-[#000]">500 000 films</span>{" "}
                                 disponibles. <br />
-                                -&gt; Plus de <span className="font-semibold text-[#000]">100 000 séries</span>{" "}
-                                listées. <br />
-                                -&gt; Plus de <span className="font-semibold text-[#000]">500 000</span> personnes
+                                {/* -&gt; Plus de <span className="font-semibold text-[#000]">100 000 séries</span>{" "}
+                                listées. <br /> */}
+                                {/* -&gt; Plus de <span className="font-semibold text-[#000]">500 000</span> personnes
                                 (<span className="font-semibold text-[#000]">acteurs</span>,{" "}
                                 <span className="font-semibold text-[#000]">réalisateurs</span>, etc.) inscrites. <br />
                                 -&gt; Des <span className="font-semibold text-[#000]">millions d'avis</span> et de{" "}
-                                <span className="font-semibold text-[#000]">notes</span> d'utilisateurs. <br />
+                                <span className="font-semibold text-[#000]">notes</span> d'utilisateurs. <br /> */}
                             </p>
                         </div>
                     </BoxReveal>
