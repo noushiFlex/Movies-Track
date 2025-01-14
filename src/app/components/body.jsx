@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import TextReveal from '@/components/ui/text-reveal'
 import SparklesText from '@/components/ui/sparkles-text'
