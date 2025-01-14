@@ -1,31 +1,44 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import Card from "./subcomponents/card";
 import useFetchMovies from "./subcomponents/api";
 import ShinyButton from "@/components/ui/shiny-button";
+import useSearchMovies from "./subcomponents/search";
 
 function SearchSection() {
-    const { movies, error } = useFetchMovies();
+    const { movies: popularMovies, error } = useFetchMovies(); // Popular movies initially
+    const [sMovie, setSMovie] = useState(""); // Search query state
+
+    const { movies: searchResults, errors } = useSearchMovies(sMovie); // Search movies based on the query
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        const query = document.querySelector('#search-query').value;
+        if (query) {
+            setSMovie(query); // Update the search query state
+        } else {
+            alert('Veuillez entrer du texte');
+        }
+    };
+
+    const moviesToDisplay = sMovie ? searchResults : popularMovies;
 
     return (
         <div>
             <hr />
             <div id="search-section" className="flex w-full max-w-sm items-center space-x-2 p-10">
-                <Input type="text" placeholder="Recherchez un film..." />
-                <ShinyButton onClick={(e) => {
-                    e.preventDefault
-                }}>Chercher</ShinyButton>
+                <Input type="text" id='search-query' placeholder="Recherchez un film..." />
+                <ShinyButton onClick={handleSearch}>Chercher</ShinyButton>
             </div>
-            {error && (
+            {error || errors ? (
                 <span className="bg-red-500 p-2 rounded text-white">
-                    Erreur : {error}
+                    Erreur : {error || errors}
                 </span>
-            )}
+            ) : null}
             <div className="p-10 grid grid-cols-2 gap-5">
-                {movies.slice(0, 20).map((movie) => (
+                {moviesToDisplay && moviesToDisplay.slice(0, 50).map((movie) => (
                     <Card
                         key={movie.id}
                         title={movie.name || movie.title}

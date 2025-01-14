@@ -10,7 +10,7 @@ function Card(props) {
       <div className="overflow-hidden h-32 z-10 w-10/12 border border-black absolute  top-16 rounded-lg shadow-lg left-0 right-0 mx-auto "><img src={poster_path} alt="Image description" className="w-full h-full object-cover"></img></div>
       <div className="mt-24 flex flex-col mb-[-5px] px-1">
         <label className=" w-full text-center">{obj.rating}/10</label>
-        <label className="font-semibold w-full text-center break-all text-xl">{obj.title}</label>
+        <label className="font-semibold w-full text-center break-words text-xl">{obj.title}</label>
         <hr className="m-auto w-8/12" />
         <div className="flex flex-col mt-6 gap-4">
           <div className="flex flex-col justify-start">

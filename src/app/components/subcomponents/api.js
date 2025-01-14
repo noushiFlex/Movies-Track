@@ -8,7 +8,7 @@ export default function useFetchMovies() {
 
     const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-    const urlAPI = 'https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc';
+    const urlAPI = 'https://api.themoviedb.org/3/movie/popular?language=fr&page=1';
     const optionsAPI = {
         method: 'GET',
         headers: {
