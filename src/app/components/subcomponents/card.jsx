@@ -15,7 +15,7 @@ function Card(props) {
         <div className="flex flex-col mt-6 gap-4">
           <div className="flex flex-col justify-start">
             <label className="font-semibold">Description</label>
-            <label className="break-all">{obj.description}</label>
+            <label className="break-words">{obj.description}</label>
           </div>
           <div className="flex flex-col justify-start">
             <label className="font-semibold">popularity</label>
