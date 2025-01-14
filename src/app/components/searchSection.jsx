@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Card from "./subcomponents/card";
 import useFetchMovies from "./subcomponents/api";
+import ShinyButton from "@/components/ui/shiny-button";
 
 function SearchSection() {
     const { movies, error } = useFetchMovies();
@@ -13,8 +14,10 @@ function SearchSection() {
         <div>
             <hr />
             <div id="search-section" className="flex w-full max-w-sm items-center space-x-2 p-10">
-                <Input type="email" placeholder="Recherchez un film..." />
-                <Button type="submit">Chercher</Button>
+                <Input type="text" placeholder="Recherchez un film..." />
+                <ShinyButton onClick={(e) => {
+                    e.preventDefault
+                }}>Chercher</ShinyButton>
             </div>
             {error && (
                 <span className="bg-red-500 p-2 rounded text-white">
