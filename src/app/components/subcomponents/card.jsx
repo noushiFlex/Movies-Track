@@ -4,7 +4,7 @@ function Card(props) {
   const posterPath = `https://image.tmdb.org/t/p/w500${poster}`;
 
   return (
-    <div className="border rounded-lg h-[300px] w-full relative flex-col overflow-scroll shadow-lg">
+    <div className="border rounded-lg h-[300px] w-full relative flex-col overflow-scroll pb-10 shadow-lg">
       {/* Background Image */}
       <div className="overflow-hidden h-2/5">
         <img
