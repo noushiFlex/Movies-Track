@@ -1,4 +1,5 @@
 import { Bricolage_Grotesque } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 // Spécifier les sous-ensembles de la police
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className={BricolageGrotesqueFonts.className}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
